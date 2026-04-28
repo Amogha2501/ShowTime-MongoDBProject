@@ -7,7 +7,7 @@ const showRoutes=require('./routes/showRoutes');
 const bookingRoutes=require('./routes/bookingRoutes');
 const authRoutes = require('./routes/authRoutes');
 const cors = require('cors');
-
+app.use(cors());
 const app=express();
 app.use(express.json());
 app.use(cors());
