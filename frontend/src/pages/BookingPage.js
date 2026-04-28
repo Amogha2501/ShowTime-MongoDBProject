@@ -11,19 +11,15 @@ const BookingPage = () => {
   const [isBooking, setIsBooking] = useState(false);
   const [bookingSuccess, setBookingSuccess] = useState(false);
   const [loading, setLoading] = useState(true);
-  const [setUser] = useState(null);
 
   useEffect(() => {
-    const token = localStorage.getItem('token');
-    const storedUser = localStorage.getItem('user');
-    
-    if (!token || !storedUser) {
-      navigate('/login', { state: { from: `/book/${showId}` } });
-    } else {
-      setUser(JSON.parse(storedUser));
-    }
-  }, [showId, navigate]);
-
+  const token = localStorage.getItem('token');
+  const storedUser = localStorage.getItem('user');
+  
+  if (!token || !storedUser) {
+    navigate('/login', { state: { from: `/book/${showId}` } });
+  }
+}, [showId, navigate]);
   useEffect(() => {
     const fetchShowDetails = async () => {
       try {
