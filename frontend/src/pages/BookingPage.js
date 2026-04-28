@@ -11,7 +11,7 @@ const BookingPage = () => {
   const [isBooking, setIsBooking] = useState(false);
   const [bookingSuccess, setBookingSuccess] = useState(false);
   const [loading, setLoading] = useState(true);
-  const [user, setUser] = useState(null);
+  const [setUser] = useState(null);
 
   useEffect(() => {
     const token = localStorage.getItem('token');
